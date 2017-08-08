@@ -1,0 +1,10 @@
+#ifndef HEADFIRSTDESIGNPATTERNS_FLYBEHAVIOR_H
+#define HEADFIRSTDESIGNPATTERNS_FLYBEHAVIOR_H
+
+class IFlyBehavior
+{
+public:
+    virtual void fly() = 0;
+};
+
+#endif //HEADFIRSTDESIGNPATTERNS_FLYBEHAVIOR_H
