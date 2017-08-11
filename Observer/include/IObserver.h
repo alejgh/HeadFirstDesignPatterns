@@ -6,7 +6,7 @@ class Subject;
 class IObserver
 {
 public:
-    virtual void update(float temperature, float humidity, float pressure) = 0;
+    virtual void update(const Subject& subject) = 0;
 };
 
 #endif //HEADFIRSTDESIGNPATTERNS_IOBSERVER_H

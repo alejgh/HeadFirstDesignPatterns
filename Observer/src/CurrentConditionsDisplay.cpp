@@ -1,5 +1,5 @@
 #include "CurrentConditionsDisplay.h"
-#include "Subject.h"
+#include "WeatherData.h"
 
 #include <iostream>
 
@@ -13,11 +13,16 @@ CurrentConditionsDisplay::CurrentConditionsDisplay(Subject& weatherData)
     weatherData.registerObserver(this);
 }
 
-void CurrentConditionsDisplay::update(float temperature, float humidity, float pressure)
+void CurrentConditionsDisplay::update(const Subject& subject)
 {
-    mTemperature = temperature;
-    mHumidity = humidity;
-    display();
+    const WeatherData *weatherData;
+
+    if ((weatherData = dynamic_cast<const WeatherData *>(&subject)) != nullptr)
+    {
+        mTemperature = weatherData->getTemperature();
+        mHumidity = weatherData->getHumidity();
+        display();
+    }
 }
 
 void CurrentConditionsDisplay::display()

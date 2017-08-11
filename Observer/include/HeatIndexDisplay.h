@@ -13,7 +13,7 @@ private:
 public:
     HeatIndexDisplay(Subject& weatherData);
 
-    virtual void update(float temperature, float humidity, float pressure) override;
+    virtual void update(const Subject& subject) override;
     virtual void display() override;
 
 private:

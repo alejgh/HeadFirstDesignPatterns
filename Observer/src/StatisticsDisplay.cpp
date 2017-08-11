@@ -1,5 +1,5 @@
 #include "StatisticsDisplay.h"
-#include "Subject.h"
+#include "WeatherData.h"
 
 #include <iostream>
 #include <limits>
@@ -17,18 +17,23 @@ StatisticsDisplay::StatisticsDisplay(Subject &weatherData)
 }
 
 
-void StatisticsDisplay::update(float temp, float humidity, float pressure)
+void StatisticsDisplay::update(const Subject& subject)
 {
-    mTempSum += temp;
-    mNumReadings++;
+    const WeatherData *weatherData;
 
-    if(temp > mMaxTemp)
-        mMaxTemp = temp;
+    if ((weatherData = dynamic_cast<const WeatherData *>(&subject)) != nullptr)
+    {
+        mTempSum += weatherData->getTemperature();
+        mNumReadings++;
 
-    if(temp < mMinTemp)
-        mMinTemp = temp;
+        if (weatherData->getTemperature() > mMaxTemp)
+            mMaxTemp = weatherData->getTemperature();
 
-    display();
+        if (weatherData->getTemperature() < mMinTemp)
+            mMinTemp = weatherData->getTemperature();
+
+        display();
+    }
 }
 
 void StatisticsDisplay::display()

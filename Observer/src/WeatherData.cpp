@@ -7,14 +7,9 @@ WeatherData::WeatherData()
         , mPressure()
 {}
 
-void WeatherData::notifyObservers()
-{
-    for (auto observerPtr : mObservers)
-        observerPtr->update(mTemperature, mHumidity, mPressure);
-}
-
 void WeatherData::measurementsChanged()
 {
+    setChanged();
     notifyObservers();
 }
 

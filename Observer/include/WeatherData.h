@@ -14,8 +14,6 @@ public:
     WeatherData();
 
 public:
-    virtual void notifyObservers() override;
-
     void measurementsChanged();
     void setMeasurements(float temperature, float humidity, float pressure);
 

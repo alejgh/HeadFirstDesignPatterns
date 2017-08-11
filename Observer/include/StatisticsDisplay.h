@@ -19,7 +19,7 @@ public:
     StatisticsDisplay(Subject& weatherData);
 
 public:
-    virtual void update(float temp, float humidity, float pressure) override;
+    virtual void update(const Subject& subject) override;
     virtual void display() override;
 
 };

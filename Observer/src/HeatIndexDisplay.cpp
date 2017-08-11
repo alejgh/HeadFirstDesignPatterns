@@ -1,5 +1,5 @@
 #include "HeatIndexDisplay.h"
-#include "Subject.h"
+#include "WeatherData.h"
 
 #include <cmath>
 #include <iostream>
@@ -13,10 +13,14 @@ HeatIndexDisplay::HeatIndexDisplay(Subject &weatherData)
     mWeatherData.registerObserver(this);
 }
 
-void HeatIndexDisplay::update(float t, float rh, float pressure)
+void HeatIndexDisplay::update(const Subject& subject)
 {
-    mHeatIndex = computeHeatIndex(t, rh);
-    display();
+    const WeatherData* weatherData;
+    if ((weatherData = dynamic_cast<const WeatherData*>(&subject)) != nullptr)
+    {
+        mHeatIndex = computeHeatIndex(weatherData->getTemperature(), weatherData->getHumidity());
+        display();
+    }
 }
 
 void HeatIndexDisplay::display()

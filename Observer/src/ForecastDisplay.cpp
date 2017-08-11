@@ -1,5 +1,6 @@
 #include "ForecastDisplay.h"
 #include "Subject.h"
+#include "WeatherData.h"
 
 #include <iostream>
 
@@ -13,11 +14,16 @@ ForecastDisplay::ForecastDisplay(Subject &weatherData)
     mWeatherData.registerObserver(this);
 }
 
-void ForecastDisplay::update(float temperature, float humidity, float pressure)
+void ForecastDisplay::update(const Subject& subject)
 {
-    mPreviousPressure = mCurrentPressure;
-    mCurrentPressure = pressure;
-    display();
+    const WeatherData *weatherData;
+
+    if ((weatherData = dynamic_cast<const WeatherData *>(&subject)) != nullptr)
+    {
+        mPreviousPressure = mCurrentPressure;
+        mCurrentPressure = weatherData->getPressure();
+        display();
+    }
 }
 
 void ForecastDisplay::display()
