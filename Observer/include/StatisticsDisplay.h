@@ -9,7 +9,6 @@
 class StatisticsDisplay : public IObserver, public IDisplayElement
 {
 private:
-    Subject& mWeatherData;
     float mMaxTemp;
     float mMinTemp;
     float mTempSum;

@@ -7,7 +7,6 @@
 class HeatIndexDisplay : public IObserver, public IDisplayElement
 {
 private:
-    Subject& mWeatherData;
     float mHeatIndex;
 
 public:

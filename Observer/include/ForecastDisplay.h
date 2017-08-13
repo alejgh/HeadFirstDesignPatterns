@@ -9,7 +9,6 @@ class Subject;
 class ForecastDisplay : public IObserver, public IDisplayElement
 {
 private:
-    Subject& mWeatherData;
     float mCurrentPressure;
     float mPreviousPressure;
 

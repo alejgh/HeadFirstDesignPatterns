@@ -9,7 +9,6 @@ class Subject;
 class CurrentConditionsDisplay : public IObserver, public IDisplayElement
 {
 private:
-    Subject& mWeatherData;
     float mTemperature;
     float mHumidity;
 

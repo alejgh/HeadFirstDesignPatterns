@@ -7,11 +7,10 @@
 ForecastDisplay::ForecastDisplay(Subject &weatherData)
         : IObserver()
         , IDisplayElement()
-        , mWeatherData(weatherData)
         , mCurrentPressure(29.92f)
         , mPreviousPressure()
 {
-    mWeatherData.registerObserver(this);
+    weatherData.registerObserver(this);
 }
 
 void ForecastDisplay::update(const Subject& subject)

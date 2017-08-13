@@ -7,13 +7,12 @@
 StatisticsDisplay::StatisticsDisplay(Subject &weatherData)
         : IObserver()
         , IDisplayElement()
-        , mWeatherData(weatherData)
         , mMaxTemp(std::numeric_limits<float>::min())
         , mMinTemp(std::numeric_limits<float>::max())
         , mTempSum(0.f)
         , mNumReadings(0)
 {
-    mWeatherData.registerObserver(this);
+    weatherData.registerObserver(this);
 }
 
 

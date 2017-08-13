@@ -7,10 +7,9 @@
 HeatIndexDisplay::HeatIndexDisplay(Subject &weatherData)
         : IObserver()
         , IDisplayElement()
-        , mWeatherData(weatherData)
         , mHeatIndex()
 {
-    mWeatherData.registerObserver(this);
+    weatherData.registerObserver(this);
 }
 
 void HeatIndexDisplay::update(const Subject& subject)

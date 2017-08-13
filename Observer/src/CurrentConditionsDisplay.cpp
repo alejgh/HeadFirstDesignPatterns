@@ -6,7 +6,6 @@
 CurrentConditionsDisplay::CurrentConditionsDisplay(Subject& weatherData)
         : IObserver()
         , IDisplayElement()
-        , mWeatherData(weatherData)
         , mTemperature()
         , mHumidity()
 {
