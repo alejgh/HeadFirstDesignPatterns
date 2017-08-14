@@ -11,3 +11,6 @@ add_executable(Strategy ${STRATEGY_SOURCE_FILES})
 
 file(GLOB OBSERVER_SOURCE_FILES "${CMAKE_SOURCE_DIR}/Observer/src/*.cpp")
 add_executable(Observer ${OBSERVER_SOURCE_FILES})
+
+file(GLOB DECORATOR_SOURCE_FILES "${CMAKE_SOURCE_DIR}/Decorator/src/*cpp")
+add_executable(Decorator ${DECORATOR_SOURCE_FILES})
