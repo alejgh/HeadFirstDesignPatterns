@@ -1,0 +1,15 @@
+#ifndef HEADFIRSTDESIGNPATTERNS_CHICAGOSTYLECLAMPIZZA_H
+#define HEADFIRSTDESIGNPATTERNS_CHICAGOSTYLECLAMPIZZA_H
+
+#include "PizzaStore.h"
+
+
+class ChicagoStyleClamPizza : public PizzaStore
+{
+public:
+    ChicagoStyleClamPizza();
+
+};
+
+
+#endif //HEADFIRSTDESIGNPATTERNS_CHICAGOSTYLECLAMPIZZA_H
