@@ -1,0 +1,15 @@
+#ifndef HEADFIRSTDESIGNPATTERNS_NYSTYLEPEPPERONIPIZZA_H
+#define HEADFIRSTDESIGNPATTERNS_NYSTYLEPEPPERONIPIZZA_H
+
+#include "Pizza.h"
+
+
+class NYStylePepperoniPizza : public Pizza
+{
+public:
+    NYStylePepperoniPizza();
+
+};
+
+
+#endif //HEADFIRSTDESIGNPATTERNS_NYSTYLEPEPPERONIPIZZA_H

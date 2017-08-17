@@ -15,6 +15,8 @@ protected:
 protected:
     Pizza();
     Pizza(const std::string& name, const std::string& dough, const std::string& sauce);
+
+public:
     ~Pizza();
 
 public:

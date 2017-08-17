@@ -6,7 +6,7 @@
 class ChicagoPizzaStore : public PizzaStore
 {
 private:
-    virtual std::unique_ptr<Pizza> createPizza(PizzaType type) = 0;
+    virtual std::unique_ptr<Pizza> createPizza(PizzaType type) override;
 
 };
 

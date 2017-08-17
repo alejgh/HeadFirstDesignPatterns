@@ -1,0 +1,15 @@
+#ifndef HEADFIRSTDESIGNPATTERNS_NYSTYLEVEGGIEPIZZA_H
+#define HEADFIRSTDESIGNPATTERNS_NYSTYLEVEGGIEPIZZA_H
+
+#include "Pizza.h"
+
+
+class NYStyleVeggiePizza : public Pizza
+{
+public:
+    NYStyleVeggiePizza();
+
+};
+
+
+#endif //HEADFIRSTDESIGNPATTERNS_NYSTYLEVEGGIEPIZZA_H

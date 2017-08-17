@@ -40,3 +40,18 @@ void Pizza::prepare()
     for (auto& topping : mToppings)
         std::cout << " - " << topping << std::endl;
 }
+
+std::string Pizza::getName() const
+{
+    return mName;
+}
+
+std::string Pizza::getDough() const
+{
+    return mDough;
+}
+
+std::string Pizza::getSauce() const
+{
+    return mSauce;
+}

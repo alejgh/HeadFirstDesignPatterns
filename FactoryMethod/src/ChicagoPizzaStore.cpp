@@ -1,18 +1,30 @@
 #include "ChicagoPizzaStore.h"
+#include "ChicagoStyleCheesePizza.h"
+#include "ChicagoStyleClamPizza.h"
+#include "ChicagoStylePepperoniPizza.h"
+#include "ChicagoStyleVeggiePizza.h"
+
 
 std::unique_ptr<Pizza> ChicagoPizzaStore::createPizza(PizzaType type)
 {
+    std::unique_ptr<Pizza> pizza;
     switch (type)
     {
         case PizzaType::CHEESE:
-            return std::unique_ptr(ChicagoStyleCheesePizza());
+            pizza = std::unique_ptr<Pizza>(new ChicagoStyleCheesePizza());
+            break;
         case PizzaType::PEPPERONI:
-            return std::unique_ptr(ChicagoStylePepperoniPizza());
+            pizza = std::unique_ptr<Pizza>(new ChicagoStylePepperoniPizza());
+            break;
         case PizzaType::CLAM:
-            return std::unique_ptr(ChicagoStyleClamPizza());
+            pizza = std::unique_ptr<Pizza>(new ChicagoStyleClamPizza());
+            break;
         case PizzaType::VEGGIE:
-            return std::unique_ptr(ChicagoStyleVeggiePizza());
+            pizza = std::unique_ptr<Pizza>(new ChicagoStyleVeggiePizza());
+            break;
         default:
-            return std::unique_ptr();
+            break;
     }
+
+    return pizza;
 }
