@@ -9,10 +9,4 @@ class Pepperoni
     friend std::ostream& operator<<(std::ostream& os, const Pepperoni& pepperoni);
 };
 
-
-std::ostream& operator<<(std::ostream& os, const Pepperoni& pepperoni)
-{
-    return pepperoni.print(os);
-}
-
 #endif //HEADFIRSTDESIGNPATTERNS_PEPPERONI_H

@@ -2,6 +2,7 @@
 #define HEADFIRSTDESIGNPATTERNS_IPIZZAINGREDIENTFACTORY_H
 
 #include <memory>
+#include <vector>
 
 class Dough;
 class Sauce;

@@ -11,10 +11,4 @@ class Veggies
     friend std::ostream& operator<<(std::ostream& os, const Veggies& veggies);
 };
 
-
-std::ostream& operator<<(std::ostream& os, const Veggies& veggies)
-{
-    return veggies.print(os);
-}
-
 #endif //HEADFIRSTDESIGNPATTERNS_VEGGIES_H

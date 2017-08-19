@@ -11,10 +11,4 @@ class Dough
     friend std::ostream& operator<<(std::ostream& os, const Dough& dough);
 };
 
-
-std::ostream& operator<<(std::ostream& os, const Dough& dough)
-{
-    return dough.print(os);
-}
-
 #endif //HEADFIRSTDESIGNPATTERNS_DOUGH_H

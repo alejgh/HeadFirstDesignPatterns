@@ -11,10 +11,4 @@ class Cheese
     friend std::ostream& operator<<(std::ostream& os, const Cheese& cheese);
 };
 
-
-std::ostream& operator<<(std::ostream& os, const Cheese& cheese)
-{
-    return cheese.print(os);
-}
-
 #endif //HEADFIRSTDESIGNPATTERNS_CHEESE_H

@@ -12,10 +12,4 @@ class Clams
 };
 
 
-std::ostream& operator<<(std::ostream& os, const Clams& clams)
-{
-    return clams.print(os);
-}
-
-
 #endif //HEADFIRSTDESIGNPATTERNS_CLAMS_H

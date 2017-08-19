@@ -12,9 +12,4 @@ class Sauce
 };
 
 
-std::ostream& operator<<(std::ostream& os, const Sauce& sauce)
-{
-    return sauce.print(os);
-}
-
 #endif //HEADFIRSTDESIGNPATTERNS_SAUCE_H
