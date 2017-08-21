@@ -12,6 +12,9 @@ class PizzaStore
 public:
     std::unique_ptr<Pizza> orderPizza(PizzaType type);
 
+public:
+    virtual ~PizzaStore() {};
+
 protected:
     virtual std::unique_ptr<Pizza> createPizza(PizzaType type) = 0;
 

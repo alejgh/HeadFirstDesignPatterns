@@ -19,7 +19,6 @@ public:
     using VeggiePtr = std::unique_ptr<Veggies>;
 
 protected:
-    std::shared_ptr<IPizzaIngredientFactory> mIngredientFactory;
     std::string mName;
     std::unique_ptr<Dough> mDough;
     std::unique_ptr<Sauce> mSauce;
@@ -29,10 +28,10 @@ protected:
     std::unique_ptr<Clams> mClam;
 
 protected:
-    Pizza(std::shared_ptr<IPizzaIngredientFactory>& ingredientFactory);
+    Pizza(IPizzaIngredientFactory& ingredientFactory);
 
-public:
-    virtual void prepare() = 0;
+protected:
+    virtual void prepare(IPizzaIngredientFactory& ingredientFactory) = 0;
 
 public:
     void bake();
@@ -42,8 +41,6 @@ public:
     std::string getName() const;
 
 public:
-    virtual std::ostream& print(std::ostream& os) const;
-
     friend std::ostream& operator<<(std::ostream& os, const Pizza& pizza);
 
 };

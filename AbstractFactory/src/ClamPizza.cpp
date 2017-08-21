@@ -3,17 +3,18 @@
 #include <iostream>
 
 
-ClamPizza::ClamPizza(IPizzaIngredientFactory factory)
+ClamPizza::ClamPizza(IPizzaIngredientFactory& factory)
         : Pizza(factory)
 {
+    prepare(factory);
 }
 
-void ClamPizza::prepare()
+void ClamPizza::prepare(IPizzaIngredientFactory& ingredientFactory)
 {
     std::cout << "Preparing " << mName << std::endl;
 
-    mDough = std::unique_ptr(mIngredientFactory.createDough());
-    mSauce = std::unique_ptr(mIngredientFactory.createSauce());
-    mCheese = std::unique_ptr(mIngredientFactory.createCheese());
-    mClam = std::unique_ptr(mIngredientFactory.createClam());
+    mDough = std::unique_ptr<Dough>(ingredientFactory.createDough());
+    mSauce = std::unique_ptr<Sauce>(ingredientFactory.createSauce());
+    mCheese = std::unique_ptr<Cheese>(ingredientFactory.createCheese());
+    mClam = std::unique_ptr<Clams>(ingredientFactory.createClam());
 }

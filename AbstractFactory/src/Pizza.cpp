@@ -4,16 +4,16 @@
 #include <string>
 
 
-Pizza::Pizza(std::shared_ptr<IPizzaIngredientFactory>& ingredientFactory)
-        : mIngredientFactory(ingredientFactory)
-        , mName()
+Pizza::Pizza(IPizzaIngredientFactory& ingredientFactory)
+        : mName()
         , mDough()
         , mSauce()
         , mVeggies()
         , mCheese()
         , mPepperoni()
         , mClam()
-{}
+{
+}
 
 void Pizza::bake()
 {
@@ -40,12 +40,8 @@ void Pizza::setName(const std::string &newName)
     mName = newName;
 }
 
-std::ostream& Pizza::print(std::ostream &os) const
-{
-    return os;
-}
-
 std::ostream& operator<<(std::ostream& os, const Pizza& pizza)
 {
-    return pizza.print(os);
+    os << pizza.getName();
+    return os;
 }

@@ -14,6 +14,9 @@ class Clams;
 class IPizzaIngredientFactory
 {
 public:
+    virtual ~IPizzaIngredientFactory() {};
+
+public:
     virtual Dough* createDough() = 0;
     virtual Sauce* createSauce() = 0;
     virtual Cheese* createCheese() = 0;

@@ -3,17 +3,19 @@
 #include <iostream>
 
 
-VeggiePizza::VeggiePizza(IPizzaIngredientFactory factory)
+VeggiePizza::VeggiePizza(IPizzaIngredientFactory& factory)
         : Pizza(factory)
-{}
+{
+    prepare(factory);
+}
 
-void VeggiePizza::prepare()
+void VeggiePizza::prepare(IPizzaIngredientFactory& ingredientFactory)
 {
     std::cout << "Preparing " << mName << std::endl;
 
-    mDough = std::unique_ptr(mIngredientFactory.createDough());
-    mSauce = std::unique_ptr(mIngredientFactory.createSauce());
-    mCheese = std::unique_ptr(mIngredientFactory.createCheese());
-    mVeggies = mIngredientFactory.createVeggies();
+    mDough = std::unique_ptr<Dough>(ingredientFactory.createDough());
+    mSauce = std::unique_ptr<Sauce>(ingredientFactory.createSauce());
+    mCheese = std::unique_ptr<Cheese>(ingredientFactory.createCheese());
+    mVeggies = ingredientFactory.createVeggies();
 
 }

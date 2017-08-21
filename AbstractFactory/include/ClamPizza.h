@@ -7,10 +7,10 @@
 class ClamPizza : public Pizza
 {
 public:
-    ClamPizza(IPizzaIngredientFactory factory);
+    ClamPizza(IPizzaIngredientFactory& factory);
 
-public:
-    virtual void prepare() override;
+private:
+    virtual void prepare(IPizzaIngredientFactory& ingredientFactory) override;
 
 };
 

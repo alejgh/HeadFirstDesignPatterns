@@ -6,10 +6,10 @@
 class PepperoniPizza : public Pizza
 {
 public:
-    PepperoniPizza(IPizzaIngredientFactory ingredientFactory);
+    PepperoniPizza(IPizzaIngredientFactory& ingredientFactory);
 
-public:
-    virtual void prepare() override;
+private:
+    virtual void prepare(IPizzaIngredientFactory& ingredientFactory) override;
 
 };
 
