@@ -3,9 +3,9 @@
 #include <iostream>
 
 
-GarageDoor::GarageDoor() {}
-
-GarageDoor::~GarageDoor() {}
+GarageDoor::GarageDoor(const std::string &location)
+        : mLocation(location)
+{}
 
 void GarageDoor::up()
 {

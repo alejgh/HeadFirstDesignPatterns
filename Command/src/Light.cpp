@@ -2,13 +2,16 @@
 
 #include <iostream>
 
+Light::Light(const std::string &location)
+        : mLocation(location)
+{}
 
 void Light::on()
 {
-    std::cout << "Light is on.\n";
+    std::cout << mLocation << " light is on.\n";
 }
 
 void Light::off()
 {
-    std::cout << "Light is off.\n";
+    std::cout << mLocation << " light is off.\n";
 }

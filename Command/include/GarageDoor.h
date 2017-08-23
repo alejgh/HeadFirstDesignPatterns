@@ -1,12 +1,15 @@
 #ifndef HEADFIRSTDESIGNPATTERNS_GARAGEDOOR_H
 #define HEADFIRSTDESIGNPATTERNS_GARAGEDOOR_H
 
+#include <string>
 
 class GarageDoor
 {
+private:
+    std::string mLocation;
+
 public:
-    GarageDoor();
-    ~GarageDoor();
+    GarageDoor(const std::string& location);
 
 public:
     void up();
