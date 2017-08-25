@@ -9,3 +9,8 @@ void GarageDoorCloseCommand::execute()
 {
     mGarageDoor.down();
 }
+
+void GarageDoorCloseCommand::undo()
+{
+    mGarageDoor.up();
+}

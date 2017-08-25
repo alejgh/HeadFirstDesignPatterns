@@ -11,3 +11,8 @@ void StereoOnWithCDCommand::execute()
     mStereo.setCD();
     mStereo.setVolume(11);
 }
+
+void StereoOnWithCDCommand::undo()
+{
+    mStereo.off();
+}

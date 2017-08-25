@@ -8,3 +8,8 @@ void LightOffCommand::execute()
 {
     mLight.off();
 }
+
+void LightOffCommand::undo()
+{
+    mLight.on();
+}

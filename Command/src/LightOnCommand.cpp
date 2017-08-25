@@ -11,3 +11,8 @@ void LightOnCommand::execute()
 {
     mLight.on();
 }
+
+void LightOnCommand::undo()
+{
+    mLight.off();
+}

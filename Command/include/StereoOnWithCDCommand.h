@@ -15,6 +15,7 @@ public:
 
 public:
     virtual void execute() override;
+    virtual void undo() override;
 
 };
 

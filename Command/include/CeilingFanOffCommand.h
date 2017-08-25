@@ -1,15 +1,11 @@
 #ifndef HEADFIRSTDESIGNPATTERNS_CEILINGFANOFFCOMMAND_H
 #define HEADFIRSTDESIGNPATTERNS_CEILINGFANOFFCOMMAND_H
 
-#include "ICommand.h"
+#include "CeilingFanCommand.h"
 
-class CeilingFan;
 
-class CeilingFanOffCommand : public ICommand
+class CeilingFanOffCommand : public CeilingFanCommand
 {
-private:
-    CeilingFan& mCeilingFan;
-
 public:
     CeilingFanOffCommand(CeilingFan& ceilingFan);
 

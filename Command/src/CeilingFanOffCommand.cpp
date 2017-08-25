@@ -2,11 +2,12 @@
 #include "CeilingFan.h"
 
 CeilingFanOffCommand::CeilingFanOffCommand(CeilingFan &ceilingFan)
-        : mCeilingFan(ceilingFan)
+        : CeilingFanCommand(ceilingFan)
 {
 }
 
 void CeilingFanOffCommand::execute()
 {
+    CeilingFanCommand::execute();
     mCeilingFan.off();
 }
