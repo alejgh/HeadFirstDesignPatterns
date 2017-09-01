@@ -1,4 +1,4 @@
-#include "../include/TurkeyAdapter.h"
+#include "TurkeyAdapter.h"
 
 TurkeyAdapter::TurkeyAdapter(ITurkey *turkey)
         : IDuck()

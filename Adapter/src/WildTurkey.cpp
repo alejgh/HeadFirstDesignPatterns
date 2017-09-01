@@ -1,4 +1,4 @@
-#include "../include/WildTurkey.h"
+#include "WildTurkey.h"
 
 #include <iostream>
 

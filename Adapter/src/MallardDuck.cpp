@@ -1,4 +1,4 @@
-#include "../include/MallardDuck.h"
+#include "MallardDuck.h"
 
 #include <iostream>
 
