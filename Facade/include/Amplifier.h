@@ -1,9 +1,12 @@
 #ifndef HEADFIRSTDESIGNPATTERNS_AMPLIFIER_H
 #define HEADFIRSTDESIGNPATTERNS_AMPLIFIER_H
 
+#include <string>
+
 class Tuner;
 class DvdPlayer;
 class Tuner;
+class CdPlayer;
 
 class Amplifier
 {

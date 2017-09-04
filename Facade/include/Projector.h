@@ -2,6 +2,7 @@
 #define HEADFIRSTDESIGNPATTERNS_PROJECTOR_H
 
 #include "DvdPlayer.h"
+#include <string>
 
 class Projector
 {

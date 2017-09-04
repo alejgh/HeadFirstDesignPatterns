@@ -1,6 +1,9 @@
 #ifndef HEADFIRSTDESIGNPATTERNS_TUNER_H
 #define HEADFIRSTDESIGNPATTERNS_TUNER_H
 
+#include <string>
+
+class Amplifier;
 
 class Tuner
 {

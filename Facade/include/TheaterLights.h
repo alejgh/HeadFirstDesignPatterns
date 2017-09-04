@@ -1,6 +1,7 @@
 #ifndef HEADFIRSTDESIGNPATTERNS_THEATERLIGHTS_H
 #define HEADFIRSTDESIGNPATTERNS_THEATERLIGHTS_H
 
+#include <string>
 
 class TheaterLights
 {

@@ -1,6 +1,7 @@
 #ifndef HEADFIRSTDESIGNPATTERNS_POPCORNPOPPER_H
 #define HEADFIRSTDESIGNPATTERNS_POPCORNPOPPER_H
 
+#include <string>
 
 class PopcornPopper
 {

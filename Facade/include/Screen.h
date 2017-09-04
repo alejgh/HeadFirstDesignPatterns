@@ -1,6 +1,7 @@
 #ifndef HEADFIRSTDESIGNPATTERNS_SCREEN_H
 #define HEADFIRSTDESIGNPATTERNS_SCREEN_H
 
+#include <string>
 
 class Screen
 {

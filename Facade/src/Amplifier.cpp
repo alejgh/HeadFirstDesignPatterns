@@ -36,17 +36,18 @@ void Amplifier::setVolume(int level)
 
 void Amplifier::setTuner(Tuner *tuner)
 {
-    std::cout << mDescription << " setting tuner to " << *tuner << ".\n";
+    std::cout << mDescription << " setting tuner.\n";
     mTuner = tuner;
 }
 
 void Amplifier::setDvd(DvdPlayer *dvd)
 {
-    std::cout << mDescription << " setting DVD player to " << *dvd << ".\n";
+    std::cout << mDescription << " setting DVD player.\n";
     mDvd = dvd;
 }
 
 void Amplifier::setCd(CdPlayer *cd)
 {
-    std::cout << mDescription << " setting CD player to " << *dvd << ".\n";
+    std::cout << mDescription << " setting CD player.\n";
+    mCd = cd;
 }

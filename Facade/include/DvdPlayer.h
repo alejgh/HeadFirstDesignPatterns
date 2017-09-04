@@ -1,6 +1,9 @@
 #ifndef HEADFIRSTDESIGNPATTERNS_DVDPLAYER_H
 #define HEADFIRSTDESIGNPATTERNS_DVDPLAYER_H
 
+#include <string>
+
+class Amplifier;
 
 class DvdPlayer
 {

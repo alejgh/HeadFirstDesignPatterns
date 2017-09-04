@@ -46,7 +46,7 @@ void DvdPlayer::play(int track)
     }
 }
 
-DvdPlayer::stop()
+void DvdPlayer::stop()
 {
     mCurrentTrack = 0;
     std::cout << mDescription << " stopped \"" << mMovie << "\"." << std::endl;

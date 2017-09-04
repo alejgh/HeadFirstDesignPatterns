@@ -1,6 +1,8 @@
 #ifndef HEADFIRSTDESIGNPATTERNS_HOMETHEATERFACADE_H
 #define HEADFIRSTDESIGNPATTERNS_HOMETHEATERFACADE_H
 
+#include <string>
+
 class Amplifier;
 class Tuner;
 class DvdPlayer;
@@ -28,7 +30,7 @@ public:
             , Screen* screen, PopcornPopper* popper);
 
 public:
-    void watchMovie();
+    void watchMovie(const std::string& movie);
     void endMovie();
     void listenToCd(const std::string& cdTitle);
     void endCd();
