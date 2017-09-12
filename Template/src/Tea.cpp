@@ -22,7 +22,7 @@ bool Tea::customerWantsCondiments()
 
     do
     {
-        std::cout << "Do you want lemon with your tea? (y/n) ";
+        std::cout << "Do you want lemon with your tea? (y/n)  ";
         std::getline(std::cin, input);
 
         if(input.length() == 1)
